@@ -1,62 +1,85 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font: 1em sans-serif;
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font: 1em sans-serif;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #303644;
-  color: #333;
+body{
+    font-family: Arial, sans-serfif;
+    line-height: 1.6;
+    margin: 0;
+    padding:0;
+    background: #020024;
+    color: #3a31d8;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #303644;
-  color: #01e4f7;
-  border-bottom: 4px solid #303644;
-  margin: 32px;
-}
-.header-left {
-  display: flex;
-  flex-direction: column; /* so h1 is on top of the nav(home and team) */
-  gap: 10px;
-}
-.nav-list {
-  display: flex;
-  color: #01e4f7;
-  gap: 16px;
+header{
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color:#3a31d8;
+    color: #020024;
+    border-bottom: 4px solid #303644;
 }
 
-.header-right img {
-  width: 300px;
-  height: 300px;
-  border-radius: 60%;
+header{
+    font-size: size 2.5rem;
+    margin-bottom: 0.5rem;
+
+}
+
+header h1{
+    text-shadow: 0px 0px 10px #3a31d8,
+                 0px 0px 20px #020024,
+                 0px 0px 40px #3a31d8,
+                 0px 0px 80px #020024;
+font-size: 50px;
+color: #ebe9fc;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    color: #ebe9fc;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+
+}
+
+header nav ul li a:hover{
+    color: #303644;
+
+
+}
+.header-left img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
   object-fit: cover;
 }
 
 .img-container {
   position: relative; /* the container is the point of reference  for the img which will be positioned absolutely */
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   overflow: hidden; /* sicne the img moves, this keeps anything that may go outside the container hidden */
-  border-radius: 14px;
+  border-radius: 100px;
 }
 
 .img-container img {
   position: absolute; /* works with top:0 and  left: 0 to place the img at the top left corner filling it exactly */
   top: 0;
   left: 0;
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   object-fit: cover; /* ensures that the img keeps the right proportions covering the stated area without stretching */
   transition: opacity 0.7s ease; /* if opacity changes when the images swap, it ensures a smooth fade */
   border-radius: 60%; /* makes the img slightly more rounded but not like a perfect circle */
@@ -74,182 +97,112 @@ header {
   opacity: 0; /* so the original picture fades out and stays transparent as long as you hover */
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+main{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin:2rem auto;
+    background: #010104;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0.1);
 }
 
-header nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0;
-  gap: 1.5rem;
-}
-
-header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
-
-header nav ul li a:hover {
-  color: #c8e6c9;
-}
-
-main {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 2rem 1rem;
-  max-width: 800px;
-  margin: 2rem auto;
-  background: #303644;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-section {
-  flex: 1;
-  border: 2px solid #303644;
-  border-radius: 12px;
-  padding: 18px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
-  margin-bottom: 2rem;
+section{
+    margin-bottom: 2rem;
 }
 
 section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #01e4f7;
-  border-bottom: 2px solid #c8e6c9;
-  padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #0600c2;
+    border-bottom: 2px solid #0600c2;
+    padding-bottom: 0.5rem;
+    text-shadow: 0 2px 8px #010104;
+    
+
+}
+
+section h2{
+    
+    text-shadow: 0px 0px 10px #3a31d8,
+                 0px 0px 20px #020024,
+                 0px 0px 40px #3a31d8,
+                 0px 0px 80px #020024;
+font-size: 50px;
+color:#ebe9fc;
+ ;
 }
 
 section p {
-  font-size: 1rem;
-  color: #ffffff;
-  line-height: 1.6;
+    font-size: 1rem;
+    color:#0600c2;
+    line-height: 1.6rem;
 }
 
-section ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-  color: #ffffff;
+section p:hover{
+     color: #ebe9fc;
+
+}
+section ul li:hover{
+      color: #ebe9fc;
 }
 
-section ul li {
-  margin-bottom: 0.5rem;
+section ul{
+    list-style:disc;
+    padding-left: 1.5rem;
+    color: #0600c2;
+}
+
+section ul li{
+    margin-bottom: 0.5rem;
+}
+
+footer{
+    text-align:center;
+    padding: 2rem 1rem;
+    background-color: #3a31d8;
+    color: #f9f9f9;
+    border-bottom: #303644;
 }
 
 footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
+    font-size:2.5rem;
+    margin-bottom: 0.5rem;
 }
 
-footer a {
-  color: #00bcd4;
-  text-decoration: none;
+footer h3 {
+    text-shadow: 0px 0px 10px #f9f9f9,
+                 0px 0px 20px #f9f9f9,
+                 0px 0px 40px #f9f9f9,
+                 0px 0px 80px #f9f9f9;
+font-size: 50px;
+color: #f9f9f9;
 }
 
-footer a:hover {
-  text-decoration: underline;
+footer nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    gap: 1.5rem;
 }
 
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-bottom: 2rem;
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+
 }
 
-.member-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 1.5rem;
-  width: 280px;
-  text-align: center;
-  transition: box-shadow 0.2s;
+footer  nav ul li a:hover{
+    color: #010104;
+
+
 }
 
-.member-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
 
-.member-card img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
 
-.member-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: #222;
-}
 
-.member-card p {
-  font-size: 1rem;
-  color: #666;
-}
 
-.social-links {
-  margin-top: 1rem;
-}
 
-.social-links a {
-  margin: 0 0.5rem;
-  color: #00bcd4;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.social-links a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  main {
-    padding: 1.5rem;
-  }
-
-  section h2 {
-    font-size: 1.5rem;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .cards-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .member-card {
-    width: 90%;
-  }
-
-  footer {
-    padding: 1.5rem 1rem;
-  }
-}
