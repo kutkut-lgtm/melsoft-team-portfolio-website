@@ -1,195 +1,255 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font: 1em sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: 1em sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #303644;
+  color: #333;
 }
 
 header {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #4caf50;
-    color: #fff;
-    border-bottom: 4px solid #388e3c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #303644;
+  color: #01e4f7;
+  border-bottom: 4px solid #303644;
+  margin: 32px;
+}
+.header-left {
+  display: flex;
+  flex-direction: column; /* so h1 is on top of the nav(home and team) */
+  gap: 10px;
+}
+.nav-list {
+  display: flex;
+  color: #01e4f7;
+  gap: 16px;
+}
+
+.header-right img {
+  width: 300px;
+  height: 300px;
+  border-radius: 60%;
+  object-fit: cover;
+}
+
+.img-container {
+  position: relative; /* the container is the point of reference  for the img which will be positioned absolutely */
+  width: 300px;
+  height: 300px;
+  overflow: hidden; /* sicne the img moves, this keeps anything that may go outside the container hidden */
+  border-radius: 14px;
+}
+
+.img-container img {
+  position: absolute; /* works with top:0 and  left: 0 to place the img at the top left corner filling it exactly */
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  object-fit: cover; /* ensures that the img keeps the right proportions covering the stated area without stretching */
+  transition: opacity 0.7s ease; /* if opacity changes when the images swap, it ensures a smooth fade */
+  border-radius: 60%; /* makes the img slightly more rounded but not like a perfect circle */
+}
+
+.img-hover {
+  opacity: 0; /* second image fully transparent, only visible when you hover */
+}
+
+.img-container:hover .img-hover {
+  opacity: 1; /* so the hovered picture fades in */
+}
+
+.img-container:hover .img-default {
+  opacity: 0; /* so the original picture fades out and stays transparent as long as you hover */
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0 0;
-    gap: 1.5rem;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  gap: 1.5rem;
 }
 
 header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
 }
 
 header nav ul li a:hover {
-    color: #c8e6c9;
+  color: #c8e6c9;
 }
 
 main {
-    padding: 2rem 1rem;
-    max-width: 800px;
-    margin: 2rem auto;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #303644;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 section {
-    margin-bottom: 2rem;
+  flex: 1;
+  border: 2px solid #303644;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+  margin-bottom: 2rem;
 }
 
 section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #4caf50;
-    border-bottom: 2px solid #c8e6c9;
-    padding-bottom: 0.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #01e4f7;
+  border-bottom: 2px solid #c8e6c9;
+  padding-bottom: 0.5rem;
 }
 
 section p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.6;
 }
 
 section ul {
-    list-style: disc;
-    padding-left: 1.5rem;
-    color: #555;
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: #ffffff;
 }
 
 section ul li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 footer {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
 }
 
 footer a {
-    color: #00bcd4;
-    text-decoration: none;
+  color: #00bcd4;
+  text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .member-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    padding: 1.5rem;
-    width: 280px;
-    text-align: center;
-    transition: box-shadow 0.2s;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  width: 280px;
+  text-align: center;
+  transition: box-shadow 0.2s;
 }
 
 .member-card:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .member-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 .member-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: #222;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #222;
 }
 
 .member-card p {
-    font-size: 1rem;
-    color: #666;
+  font-size: 1rem;
+  color: #666;
 }
 
 .social-links {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .social-links a {
-    margin: 0 0.5rem;
-    color: #00bcd4;
-    text-decoration: none;
-    font-size: 1rem;
+  margin: 0 0.5rem;
+  color: #00bcd4;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 .social-links a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
+  header h1 {
+    font-size: 2rem;
+  }
 
-    header nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
+  header nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-    main {
-        padding: 1.5rem;
-    }
+  main {
+    padding: 1.5rem;
+  }
 
-    section h2 {
-        font-size: 1.5rem;
-    }
+  section h2 {
+    font-size: 1.5rem;
+  }
 
-    .nav-list {
-        flex-direction: column;
-        gap: 1rem;
-    }
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
-    }
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .member-card {
-        width: 90%;
-    }
+  .member-card {
+    width: 90%;
+  }
 
-    footer {
-        padding: 1.5rem 1rem;
-    }
+  footer {
+    padding: 1.5rem 1rem;
+  }
 }
